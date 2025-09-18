@@ -248,9 +248,47 @@
             }
 
             Console.WriteLine("");
-            finalScore = (score / 6.0);
+            Console.WriteLine("Question 4: True or false: Rita Skeeter is an Animagus");
+            textAnswer = Console.ReadLine();
 
-            if (score > 0)
+            Console.WriteLine("");
+
+            if (textAnswer.ToLower() == "true" || textAnswer.ToLower() == "t")
+            {
+                Console.WriteLine("Correct! Rita Skeeter is an unregistered beetle Animagus.");
+
+                score += 1;
+            }
+            else
+            {
+                Console.WriteLine("Incorrect! Rita Skeeter is an unregistered beetle Animagus.");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("Question 4: Which Weasley twin died in the battle of Hogwarts?");
+            textAnswer = Console.ReadLine();
+
+            Console.WriteLine("");
+
+            if (textAnswer.ToLower() == "fred")
+            {
+                Console.WriteLine("Correct! During the events of Harry Potter and the Deathly Hallows, while George " +
+                    "recieves a curse and loses his ear earlier in the story, Fred is the one who ultimately dies. I still" +
+                    " cry every time!");
+
+                score += 1;
+            }
+            else
+            {
+                Console.WriteLine("Correct! During the events of Harry Potter and the Deathly Hallows, while George " +
+                    "recieves a curse and loses his ear earlier in the story, Fred is the one who ultimately dies. I still" +
+                    " cry every time!");
+            }
+
+                Console.WriteLine("");
+            finalScore = (score / 5.0);
+
+            if (score > 0 && score < 5)
             {
                 Console.WriteLine("Congratulations, you got " + score + " answers correct! That's a score of " 
                     + finalScore.ToString("P") + ". The " + hogwartsHouse + " house has recieved " + (score * 10) + " points!");
@@ -259,7 +297,7 @@
             {
                 Console.WriteLine("Wow! You got 0 answers correct! You're a disappointment to the name of " + hogwartsHouse +"!");
             }
-            else if (score >= 6)
+            else if (score == 5)
             {
                 Console.WriteLine("A perfect score! 100 points to " + hogwartsHouse + "!");
             }
